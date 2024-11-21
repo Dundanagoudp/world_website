@@ -1,0 +1,166 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+}
+
+.top-strip {
+      background-color: #1E293B;
+      color: white;
+      padding: 10px 20px;
+      font-size: 14px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+}
+
+.top-strip .contact-info span {
+      margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+      .top-strip .contact-info span {
+            margin-left: 5px;
+      }
+}
+
+
+.main-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #1E293B;
+      padding: 20px 20px;
+      color: white;
+}
+
+.logo img {
+      width: 100px;
+      height: auto;
+}
+
+.menu {
+      display: flex;
+      gap: 25px;
+      margin-left: 40%;
+}
+
+.menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 17px;
+      position: relative;
+}
+
+.menu a:hover {
+      color: #3498db;
+}
+
+.cta-button .btn {
+      text-decoration: none;
+      color: white;
+      border: 1px solid white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+}
+
+.cta-button .btn:hover {
+      background-color: white;
+      color: #1E293B;
+}
+
+.hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+}
+
+.hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+}
+
+.sidebar {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 250px;
+      height: 100%;
+      background-color: #1E293B;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+      transition: 0.3s ease-in-out;
+}
+
+.sidebar.open {
+      left: 0;
+}
+
+.sidebar .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+}
+
+.sidebar .menu a {
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      padding: 10px 0;
+      transition: all 0.3s ease;
+}
+
+.sidebar .menu a:hover {
+      color: #3498db;
+}
+
+@media (max-width: 768px) {
+      .top-strip {
+            font-size: 12px;
+            padding: 8px 10px;
+      }
+
+      .menu {
+            display: none;
+      }
+
+      .hamburger {
+            display: flex;
+      }
+
+      .cta-button {
+            display: none;
+      }
+
+      .sidebar {
+            width: 200px;
+            padding: 15px;
+      }
+
+      .sidebar .menu {
+            gap: 15px;
+      }
+
+      .sidebar .menu a {
+            font-size: 16px;
+            padding: 8px 0;
+      }
+}
+
+@media (min-width: 769px) {
+      .hamburger {
+            display: none;
+      }
+
+      .menu {
+            display: flex;
+      }
+
+      .cta-button {
+            display: block;
+      }
+}
